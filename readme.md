@@ -1,5 +1,9 @@
 # Create Azure SQL Database using Bicep
 
+[![Open in vscode.dev](https://img.shields.io/badge/Open%20in-vscode.dev-blue)][1]
+
+[1]: https://vscode.dev/github/lluppesms/azure.sql.tde.byok/
+
 This repo contains an example and notes on creating an Azure SQL Database with Customer Managed TDE using Bicep.
 
 For Azure SQL Database, the TDE protector is set at the server level and is inherited by all encrypted databases associated with that server.
