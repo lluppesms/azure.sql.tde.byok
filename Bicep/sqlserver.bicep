@@ -3,8 +3,8 @@
 // --------------------------------------------------------------------------------
 param sqlServerName string = uniqueString('sql', resourceGroup().id)
 param sqlDBName string = 'SampleDB'
-@allowed(['Standard','Premium','BusinessCritical'])
-param sqlDbTier string = 'Standard'
+@allowed(['Basic','Standard','Premium','BusinessCritical'])
+param sqlDbTier string = 'Basic'
 param adAdminUserId string = 'somebody@somedomain.com'
 param adAdminUserSid string = '12345678-1234-1234-1234-123456789012'
 param adAdminTenantId string = '12345678-1234-1234-1234-123456789012'

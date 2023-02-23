@@ -14,8 +14,8 @@ param appName string = 'app'
 @allowed(['dev','demo','qa','stg','prod'])
 param environmentCode string = 'dev'
 param databaseName string = 'myDatabase'
-@allowed(['Standard','Premium','BusinessCritical'])
-param sqlDbTier string = 'Standard'
+@allowed(['Basic','Standard','Premium','BusinessCritical'])
+param sqlDbTier string = 'Basic'
 param location string = resourceGroup().location
 param adminLoginUserId string = ''
 param adminLoginUserSid string = ''
