@@ -8,19 +8,15 @@ param sqlDbTier string = 'Standard'
 param adAdminUserId string = 'somebody@somedomain.com'
 param adAdminUserSid string = '12345678-1234-1234-1234-123456789012'
 param adAdminTenantId string = '12345678-1234-1234-1234-123456789012'
+param location string = resourceGroup().location
+param commonTags object = {}
 // param sqldbAdminUserId string
 // @secure()
 // param sqldbAdminPassword string
 
-param location string = resourceGroup().location
-param commonTags object = {}
-
 // --------------------------------------------------------------------------------
 var templateTag = { TemplateFile: '~sqlserver.bicep' }
 var tags = union(commonTags, templateTag)
-
-// --------------------------------------------------------------------------------
-
 var adminDefinition = adAdminUserId == '' ? {} : {
   administratorType: 'ActiveDirectory'
   principalType: 'Group'
@@ -31,6 +27,7 @@ var adminDefinition = adAdminUserId == '' ? {} : {
 } 
 var primaryUser =  adAdminUserId == '' ? '' : adAdminUserId
 
+// --------------------------------------------------------------------------------
 resource sqlServerResource 'Microsoft.Sql/servers@2022-05-01-preview' = {
   name: sqlServerName
   location: location
