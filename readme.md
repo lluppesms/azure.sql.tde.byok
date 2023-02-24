@@ -20,6 +20,8 @@ For those using service-managed TDE who would like to start using customer-manag
 
 [Enable TDE on SQL Server with PowerShell - MS Learn](https://learn.microsoft.com/en-us/azure/azure-sql/database/transparent-data-encryption-byok-configure?view=azuresql&tabs=azure-powershell)
 
+[Backup your key](https://learn.microsoft.com/en-us/powershell/module/az.keyvault/backup-azkeyvaultkey?view=azps-9.4.0)
+
 ---
 
 ## Security Settings
